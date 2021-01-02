@@ -3,11 +3,13 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+const Constraint= Matter.Constraint
+
 
 function preload()
 
 {
-	
+ 
 }
 
 function setup() {
@@ -29,7 +31,7 @@ function setup() {
 	 m5 = new mango(470,340,50,50);
 	 m6 = new mango(760,340,50,50);
 	 m7 = new mango(780,390,50,50);
-	 boy = new boy(170,600,200,250);
+	 boy = new Boy(170,600,200,250);
  
 	Engine.run(engine);
   
@@ -82,7 +84,7 @@ function keypressed(){
       
         Matter.Body.setPosition(Stone.body, {x:235,y :420})
         sling.attach(Stone.body);
-    }   
+ }   
 }  
 
 
